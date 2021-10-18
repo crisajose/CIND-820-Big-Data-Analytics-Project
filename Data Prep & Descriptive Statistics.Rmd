@@ -1,0 +1,114 @@
+---
+title: "Data Prep & Descriptive Statistics"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(RCurl)
+```
+#Importing the data
+```{r}
+train <- read.csv("https://raw.githubusercontent.com/crisajose/CIND-820-Big-Data-Analytics-Project/main/train.csv", header=T)
+
+```
+
+# number of observations and number of variables in dataset
+```{r}
+dim(train)
+```
+
+# displaying structure and a subset of values of dataset
+```{r}
+glimpse(train)
+```
+
+#summary of predictive variable(Response), BMI, Weight & Height.
+```{r}
+summary(train$Response)
+summary(train$BMI)
+summary(train$Wt)
+summary(train$Ht)
+```
+
+#Checking missing values present in dataset
+```{r}
+colSums(is.na(train))
+```
+#Find columns with missing values
+```{r}
+Missingcol<-colnames(train)[colSums(is.na(train)) > 0]
+Missingcol
+
+```
+
+
+
+#11 out of 13 columns having NA have very high missing values
+
+# Checking Correlation between BMI, Wt and Ht
+```{r}
+cor(train$BMI,train$Wt)
+```
+```{r}
+cor(train$BMI,train$Ht) 
+```
+
+```{r}
+cor(train$Ht,train$Wt)
+```
+
+We find that BMI is highly correlated with Wt.
+
+```{r}
+library(corrplot)
+newclean<- train[,c(10,11,12)]
+clean_corr <-  as.matrix(cor(newclean))
+corrplot(clean_corr, method="number")
+corrplot(clean_corr, method="pie")
+```
+
+
+#Examine variable Response
+
+```{r}
+library(ggplot2)
+responseg <- ggplot(data = train, aes(Response)) + geom_bar()
+responseg
+#Response values for 3 and 4 are very rare. Response 8 is by far the most common value
+```
+
+#BMI seem to have an impact on the response variable based on the graph
+
+
+
+#Response value 8 has lower value of BMI compared to response value 1.Therefore we see that BMI has a strong relationship with Response variable
+```{r}
+# Boxplot Response ~ BMI
+ggplot(train, aes(x=factor(Response), y=BMI)) + ggtitle("Boxplot Response ~ BMI") + 
+  geom_boxplot(colour="blue")+  theme(axis.text.x=element_text(angle=90,hjust=1))
+```
+
+#we see that Ht does not have a strong relationship with Response variable and does not affect it as much
+```{r}
+# Boxplot Response ~ Ht
+ggplot(train, aes(x=factor(Response), y=Ht)) + ggtitle("Boxplot Response ~ Ht") + 
+  geom_boxplot(colour="red")+  theme(axis.text.x=element_text(angle=90,hjust=1))
+```
+
+
+#we see that Age has a relationship with Response variable
+```{r}
+ggplot(train, aes(x=factor(Response), y=Ins_Age)) + ggtitle("Boxplot Response ~ Ins_Age") + 
+  geom_boxplot(colour="blue")+  theme(axis.text.x=element_text(angle=90,hjust=1))
+```
+
+#We can see that distribution of response variable is dependent on Family_Hist_1
+```{r}
+# histogram of Response on Family_Hist_1
+  
+  ggplot(train, aes(x=Response)) + ggtitle("Histogram  Response with Family_Hist_1 values") +
+    geom_histogram(position="identity", colour="black", alpha=0.2, bins = 10)+
+    facet_grid(. ~ Family_Hist_1)
+```
+
