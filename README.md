@@ -1,7 +1,7 @@
 # CIND-820-Big-Data-Analytics-Project
 The objective is to build a predictive model that accurately classifies risk and also evaluate the risks presented by new business in order to determine acceptance or decline of the new business.
 
-
+The dataset used is https://www.kaggle.com/c/prudential-life-insurance-assessment/overview which is a public dataset available in Kaggle. Prudential Life Insurance announced a competition in Kaggle in 2016 that invited data scientists to come up with a risk assessment model. The data set consists Train and Test data which describe the characteristics of life insurance applicants. It comprises of nominal, continuous and discrete variables, which are anonymized. It consists of Train data with 59381 clients and test data with 19765 clients and 127 features each. We have to predict the Response variable which ranges from 1 to 8. 8 indicates the highest risk level.
 
 # The data
 This repository contains a train and test dataset. train.csv - the training set, contains the Response values test.csv - the test set, you must predict the Response variable for all rows in this file
@@ -23,3 +23,7 @@ The following variables are discrete:
 Medical_History_1, Medical_History_10, Medical_History_15, Medical_History_24, Medical_History_32
 
 Medical_Keyword_1-48 are dummy variables.
+
+# Overall methodology and Process flow
+
+![image](https://user-images.githubusercontent.com/91291523/139596968-e30525f9-db7b-45f0-821b-33ecb30f6d31.png)
