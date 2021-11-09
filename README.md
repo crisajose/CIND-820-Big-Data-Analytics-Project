@@ -4,9 +4,10 @@ The objective is to build a predictive model that accurately classifies risk and
 The dataset used is https://www.kaggle.com/c/prudential-life-insurance-assessment/overview which is a public dataset available in Kaggle. Prudential Life Insurance announced a competition in Kaggle in 2016 that invited data scientists to come up with a risk assessment model. The data set consists Train and Test data which describe the characteristics of life insurance applicants. It comprises of nominal, continuous and discrete variables, which are anonymized. It consists of Train data with 59381 clients and test data with 19765 clients and 127 features each. We have to predict the Response variable which ranges from 1 to 8. 8 indicates the highest risk level.
 
 # Content of the Repository
+-read.me file listing the tentative stages of the project and outlining the content of the repository
 -Test and Training Dataset
 -Data preparation and Descriptive Statistics
--Decision Tree and Naive Nayes Jupyter file
+-Decision Tree and Naive Bayes Jupyter file
 -HTML/PDF format of technical files
 
 
