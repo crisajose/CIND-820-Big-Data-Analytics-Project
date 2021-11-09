@@ -6,9 +6,7 @@ The dataset used is https://www.kaggle.com/c/prudential-life-insurance-assessmen
 # Content of the Repository
 -Test and Training Dataset
 -Data preparation and Descriptive Statistics
--Decision Tree RMD file
--Naive Bayes Py file
--Neural Network Py file
+-Decision Tree and Naive Nayes Jupyter file
 -HTML/PDF format of technical files
 
 
