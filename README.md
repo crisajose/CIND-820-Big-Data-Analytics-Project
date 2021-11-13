@@ -42,7 +42,7 @@ This research will investigate the effectiveness of three algorithms in predicti
 
 # Model Accuracy
 
-Splitted the dataset into 80% training set and 20% testing set. From running Decision tree model & Naive Bayes model using feature selection, Decision Tree performs the best. It gave an accuracy around 54.31%.
+Splitted the dataset into 80% training set and 20% testing set. From running Decision tree model, Naive Bayes model and Neural Network using feature selection, Decision Tree performs the best. It gave an accuracy around 54.31%.
 
 ![image](https://user-images.githubusercontent.com/91291523/140852189-f197c8ca-e64d-48b7-b4e3-fd859c5b3aaa.png)
 
