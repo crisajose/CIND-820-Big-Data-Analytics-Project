@@ -7,7 +7,7 @@ The dataset used is https://www.kaggle.com/c/prudential-life-insurance-assessmen
 -read.me file listing the tentative stages of the project and outlining the content of the repository
 -Test and Training Dataset
 -Data preparation and Descriptive Statistics
--Decision Tree and Naive Bayes Jupyter file
+-Decision Tree, Naive Bayes,Random Forest and XGB Jupyter file
 -HTML/PDF format of technical files
 
 
@@ -37,12 +37,14 @@ Medical_Keyword_1-48 are dummy variables.
 ![image](https://user-images.githubusercontent.com/91291523/139596968-e30525f9-db7b-45f0-821b-33ecb30f6d31.png)
 
 # Proposed research
-Neural Network, Decision Trees and Naïve Bayes are proposed to be used in this research. A decision tree model is considered to be nonparametric which does not require assumptions. They do not require the input of any probability distributions about the response. It is an effective algorithm that can handle missing data and it can detect non-linear effects and possible interactions among the explanatory variables. Naïve Bayes is one of the quickest algorithms used for classification purposes and a good one for handling large volumes of data. In this research it can make probabilistic predictions and can handle both continuous and discrete data.
+Decision Trees, Naïve Bayes, Random Forest and XGB are proposed to be used in this research. A decision tree model is considered to be nonparametric which does not require assumptions. They do not require the input of any probability distributions about the response. It is an effective algorithm that can handle missing data and it can detect non-linear effects and possible interactions among the explanatory variables. Naïve Bayes is one of the quickest algorithms used for classification purposes and a good one for handling large volumes of data. In this research it can make probabilistic predictions and can handle both continuous and discrete data.
 This research will investigate the effectiveness of three algorithms in predicting risk in the insurance dataset. We will evaluate the performance of the algorithms based on accuracy, precision, recall and F1-Score since these metrics are great in evaluating classifications from imbalanced datasets. Therefore, this research aims to identify key trends among different types of supervised machine learning algorithms and in addition, the advantages and limitations of different supervised machine learning algorithms are summarised.
 
 # Model Accuracy
 
-Splitted the dataset into 80% training set and 20% testing set. From running Decision tree model, Naive Bayes model and Neural Network using feature selection, Decision Tree performs the best. It gave an accuracy around 54.31%.
+Splitted the dataset into 80% training set and 20% testing set. From running Decision tree model, Naive Bayes model, Random Forest and XGB using feature selection, XGB performs the best. It gave an accuracy around 64.15%.
 
-![image](https://user-images.githubusercontent.com/91291523/140852189-f197c8ca-e64d-48b7-b4e3-fd859c5b3aaa.png)
+![image](https://user-images.githubusercontent.com/91291523/143162015-e52dfe01-1b67-4f80-a8b9-8b3b34f2be3e.png)
+
+
 
